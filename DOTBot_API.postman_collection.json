@@ -1,0 +1,136 @@
+{
+  "info": {
+    "name": "DOTBot_API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "Postman collection for DOTBot API endpoints"
+  },
+  "item": [
+    {
+      "name": "Save Chat (POST /save-chat)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{FIREBASE_ID_TOKEN}}",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"prompt\": \"Example user prompt\",\n  \"response\": \"Example GPT response\"\n}"
+        },
+        "url": {
+          "raw": "{{BASE_URL}}/save-chat",
+          "host": [
+            "{{BASE_URL}}"
+          ],
+          "path": [
+            "save-chat"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Signup (POST /auth/signup)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"user@example.com\",\n  \"password\": \"password123\",\n  \"username\": \"testuser\"\n}"
+        },
+        "url": {
+          "raw": "{{BASE_URL}}/auth/signup",
+          "host": [
+            "{{BASE_URL}}"
+          ],
+          "path": [
+            "auth",
+            "signup"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Reset Password (POST /auth/reset-password)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"user@example.com\"\n}"
+        },
+        "url": {
+          "raw": "{{BASE_URL}}/auth/reset-password",
+          "host": [
+            "{{BASE_URL}}"
+          ],
+          "path": [
+            "auth",
+            "reset-password"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Social Login (POST /auth/social-login)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{FIREBASE_ID_TOKEN}}",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{}"
+        },
+        "url": {
+          "raw": "{{BASE_URL}}/auth/social-login",
+          "host": [
+            "{{BASE_URL}}"
+          ],
+          "path": [
+            "auth",
+            "social-login"
+          ]
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "BASE_URL",
+      "value": "https://api-azjv7cvnxq-uc.a.run.app"
+    },
+    {
+      "key": "FIREBASE_ID_TOKEN",
+      "value": ""
+    }
+  ]
+}

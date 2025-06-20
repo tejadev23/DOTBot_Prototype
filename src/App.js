@@ -4,6 +4,7 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Dashboard from './pages/Dashboard';
 import ForgotPassword from './pages/ForgotPassword';
+import TestAPI from './pages/TestAPI';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Route path="/signup" element={<Signup />} />
       <Route path="/dashboard" element={<Dashboard />} />
       <Route path="/forgot-password" element={<ForgotPassword />} />
+      <Route path="/test-api" element={<TestAPI />} />
     </Routes>
   );
 }

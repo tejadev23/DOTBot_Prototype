@@ -1,16 +1,24 @@
 // src/pages/Login.js
-import React, { useState } from 'react'; // ✅ Fixed: added useState
-import { signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
-import { auth } from '../auth/firebase';
+import React, { useState, useEffect } from 'react';
+import { signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, getIdToken, onAuthStateChanged } from 'firebase/auth';
+import { auth, facebookAuthProvider } from '../auth/firebase';
 import { useNavigate } from 'react-router-dom';
-import { facebookAuthProvider } from '../auth/firebase';
-
 
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const navigate = useNavigate();
+
+  // ✅ Firebase ID token logger
+  useEffect(() => {
+    onAuthStateChanged(auth, async (user) => {
+      if (user) {
+        const token = await getIdToken(user);
+        console.log("✅ Your Firebase ID token:", token);
+      }
+    });
+  }, []);
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -41,7 +49,6 @@ function Login() {
       setError(err.message);
     }
   };
-
 
   return (
     <div style={{ padding: 40 }}>
