@@ -2,9 +2,9 @@ const functions = require("firebase-functions");
 const admin = require("firebase-admin");
 const express = require("express");
 const cors = require("cors");
+require("dotenv").config();
 const mongoose = require("mongoose");
 const { Chat, User } = require("./db");
-require("dotenv").config();
 
 admin.initializeApp();
 
@@ -144,6 +144,63 @@ app.post("/auth/social-login", async (req, res) => {
     res.status(401).json({ status: "error", message: "Invalid or expired token" });
   }
 });
+
+const axios = require("axios"); // Make sure this is at the top if not already
+const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
+
+// ✅ Chat with GPT and Save to DB
+app.post("/chat", authenticate, async (req, res) => {
+  const { prompt } = req.body;
+  const uid = req.user.uid;
+
+  console.log("🔥 Chat Request (Mock):", { uid, prompt });
+
+  if (!prompt) {
+    return res.status(400).json({ status: "error", message: "Missing prompt" });
+  }
+
+  try {
+    const gptResponse = `Hi! I'm DOTBot. You asked: "${prompt}" — that's a great question! I'll have a proper response soon.`;
+
+    // Save to MongoDB
+    const newChat = new Chat({
+      userId: uid,
+      prompt,
+      response: gptResponse,
+      timestamp: new Date(),
+    });
+    await newChat.save();
+
+    console.log("✅ Placeholder Response:", gptResponse);
+
+    res.json({ status: "success", prompt, response: gptResponse });
+  } catch (error) {
+    console.error("❌ Chat Error:", error.message);
+    res.status(500).json({ status: "error", message: "Failed to save chat" });
+  }
+});
+
+// ✅ GET /get-chat-history
+app.get("/get-chat-history", authenticate, async (req, res) => {
+  const uid = req.user.uid;
+
+  try {
+    const chats = await Chat.find({ userId: uid }).sort({ timestamp: -1 });
+
+    res.json({
+      status: "success",
+      count: chats.length,
+      chats,
+    });
+  } catch (error) {
+    console.error("❌ Failed to fetch chat history:", error);
+    res.status(500).json({ status: "error", message: "Failed to retrieve chat history" });
+  }
+});
+
+
+
+
 
 
 exports.api = functions.https.onRequest(app);

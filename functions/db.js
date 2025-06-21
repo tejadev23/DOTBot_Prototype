@@ -1,22 +1,25 @@
 const mongoose = require("mongoose");
 
-mongoose.connect(process.env.MONGODB_URI, {
-  // No longer need useNewUrlParser / useUnifiedTopology
-});
+const MONGO_URI = process.env.MONGO_URI;
+
+mongoose.connect(MONGO_URI, {
+  dbName: "dotbot",
+})
+  .then(() => console.log("✅ MongoDB connected"))
+  .catch((err) => console.error("❌ MongoDB connection error:", err));
 
 const chatSchema = new mongoose.Schema({
-  userId: { type: String, required: true },
-  prompt: { type: String, required: true },
-  response: { type: String, required: true },
-  timestamp: { type: Date, default: Date.now },
+  userId: String,
+  prompt: String,
+  response: String,
+  timestamp: Date,
 });
 
 const userSchema = new mongoose.Schema({
-  uid: { type: String, required: true },
-  email: { type: String, required: true },
-  username: { type: String },
-  loginProvider: { type: String },
-  lastSeen: { type: Date, default: Date.now },
+  uid: String,
+  email: String,
+  username: String,
+  loginProvider: String,
 });
 
 const Chat = mongoose.model("Chat", chatSchema);
