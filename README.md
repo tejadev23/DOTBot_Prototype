@@ -1,70 +1,94 @@
-# Getting Started with Create React App
+# DOTBot – GDOT Contractor Assistant
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the frontend + API integration project for DOTBot, the assistant for GDOT Contractors. It includes Firebase Authentication and secure backend APIs built with Firebase Cloud Functions and MongoDB.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🔧 Prerequisites
 
-### `npm start`
+- Node.js (v18+)
+- Firebase CLI
+- MongoDB Atlas account (used via backend)
+- A Firebase Project (already setup: `dotbot-34790`)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📁 Setup Instructions
 
-### `npm test`
+1. **Clone the Repo**
+   ```bash
+   git clone https://github.com/tejadev23/DOTBot_Prototype.git
+   cd dotbot
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. **Install Dependencies**
+   ```bash
+   npm install
+   ```
 
-### `npm run build`
+3. **Add Firebase Config**
+   In `src/auth/firebase.js`, paste the Firebase SDK config:
+   ```js
+   const firebaseConfig = {
+     apiKey: "YOUR_API_KEY",
+     authDomain: "dotbot-34790.firebaseapp.com",
+     projectId: "dotbot-34790",
+     storageBucket: "dotbot-34790.appspot.com",
+     messagingSenderId: "YOUR_SENDER_ID",
+     appId: "YOUR_APP_ID"
+   };
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. **Run the Frontend**
+   ```bash
+   npm start
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🔐 Authentication Supported
 
-### `npm run eject`
+- Email/Password Signup
+- Login
+- Google Login
+- Facebook Login
+- Forgot Password
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+All users are authenticated via Firebase Auth. After login, `idToken` is used to authorize backend API requests.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 📡 Backend API
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Backend is deployed on Firebase Cloud Functions:
 
-## Learn More
+> **Base URL**: `https://api-azjv7cvnxq-uc.a.run.app`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Available Endpoints:
+| Endpoint                | Method | Auth? | Description                     |
+|------------------------|--------|-------|---------------------------------|
+| `/auth/signup`         | POST   | ❌    | Register user                   |
+| `/auth/reset-password` | POST   | ❌    | Send reset email                |
+| `/auth/social-login`   | POST   | ✅    | Google/Facebook login handler   |
+| `/save-chat`           | POST   | ✅    | Save chat (prompt + response)   |
+| `/chat`                | POST   | ✅    | Get DOTBot placeholder reply    |
+| `/get-chat-history`    | GET    | ✅    | Fetch user chat history         |
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## 🧪 API Testing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Use the included Postman collection:  
+📁 `DOTBot_API_Collection_<date>.json`  
+Import into Postman to test all routes.
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🧠 Notes
 
-### Making a Progressive Web App
+- MongoDB stores users & chat data (`dotbot.users`, `dotbot.chats`)
+- GPT integration is mocked for now (real responses coming soon)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 👨‍💻 Developed by Vishnu @ GDOT Contractor
