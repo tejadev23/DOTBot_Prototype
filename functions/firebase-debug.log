@@ -1,32 +1,35 @@
-[debug] [2025-06-20T10:30:55.867Z] ----------------------------------------------------------------------
-[debug] [2025-06-20T10:30:55.869Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\home\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js functions:shell
-[debug] [2025-06-20T10:30:55.870Z] CLI Version:   14.7.0
-[debug] [2025-06-20T10:30:55.870Z] Platform:      win32
-[debug] [2025-06-20T10:30:55.870Z] Node Version:  v22.16.0
-[debug] [2025-06-20T10:30:55.870Z] Time:          Fri Jun 20 2025 16:00:55 GMT+0530 (India Standard Time)
-[debug] [2025-06-20T10:30:55.870Z] ----------------------------------------------------------------------
+[debug] [2025-06-25T15:49:12.948Z] ----------------------------------------------------------------------
+[debug] [2025-06-25T15:49:12.950Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\home\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js functions:shell
+[debug] [2025-06-25T15:49:12.950Z] CLI Version:   14.8.0
+[debug] [2025-06-25T15:49:12.950Z] Platform:      win32
+[debug] [2025-06-25T15:49:12.950Z] Node Version:  v22.16.0
+[debug] [2025-06-25T15:49:12.951Z] Time:          Wed Jun 25 2025 21:19:12 GMT+0530 (India Standard Time)
+[debug] [2025-06-25T15:49:12.951Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2025-06-20T10:30:56.034Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2025-06-20T10:30:56.034Z] > authorizing via signed-in user (vishnu.23ai@gmail.com)
-[debug] [2025-06-20T10:30:56.034Z] [iam] checking project dotbot-34790 for permissions ["firebase.projects.get"]
-[debug] [2025-06-20T10:30:56.035Z] Checked if tokens are valid: true, expires at: 1750418919168
-[debug] [2025-06-20T10:30:56.035Z] Checked if tokens are valid: true, expires at: 1750418919168
-[debug] [2025-06-20T10:30:56.036Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/dotbot-34790:testIamPermissions [none]
-[debug] [2025-06-20T10:30:56.036Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/dotbot-34790:testIamPermissions x-goog-quota-user=projects/dotbot-34790
-[debug] [2025-06-20T10:30:56.036Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/dotbot-34790:testIamPermissions {"permissions":["firebase.projects.get"]}
-[debug] [2025-06-20T10:30:57.431Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/dotbot-34790:testIamPermissions 200
-[debug] [2025-06-20T10:30:57.431Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/dotbot-34790:testIamPermissions {"permissions":["firebase.projects.get"]}
-[debug] [2025-06-20T10:30:57.435Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2025-06-20T10:30:57.447Z] defaultcredentials: writing to file C:\Users\home\AppData\Roaming\firebase\vishnu_23ai_gmail.com_application_default_credentials.json
-[debug] [2025-06-20T10:30:57.448Z] DEBUG: Setting GAC to C:\Users\home\AppData\Roaming\firebase\vishnu_23ai_gmail.com_application_default_credentials.json
-[debug] [2025-06-20T10:30:57.448Z] Checked if tokens are valid: true, expires at: 1750418919168
-[debug] [2025-06-20T10:30:57.448Z] Checked if tokens are valid: true, expires at: 1750418919168
-[debug] [2025-06-20T10:30:57.448Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/dotbot-34790/adminSdkConfig [none]
-[debug] [2025-06-20T10:30:57.831Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/dotbot-34790/adminSdkConfig 200
-[debug] [2025-06-20T10:30:57.831Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/dotbot-34790/adminSdkConfig {"projectId":"dotbot-34790","storageBucket":"dotbot-34790.firebasestorage.app"}
-[debug] [2025-06-20T10:30:57.840Z] [functions] Watching "C:\Users\home\OneDrive\Desktop\DOTBot-Prototype\dotbot-auth\functions" for Cloud Functions...
-[debug] [2025-06-20T10:30:57.843Z] Validating nodejs source
-[debug] [2025-06-20T10:30:58.653Z] > [functions] package.json contents: {
+[debug] [2025-06-25T15:49:13.115Z] Field "/functions" in "firebase.json" is possibly invalid: must be object
+[debug] [2025-06-25T15:49:13.115Z] Object "/functions/0" in "firebase.json" has unknown property: {"additionalProperty":"memory"}
+[debug] [2025-06-25T15:49:13.116Z] Field "/functions" in "firebase.json" is possibly invalid: must match a schema in anyOf
+[debug] [2025-06-25T15:49:13.120Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-06-25T15:49:13.120Z] > authorizing via signed-in user (vishnu.23ai@gmail.com)
+[debug] [2025-06-25T15:49:13.120Z] [iam] checking project dotbot-34790 for permissions ["firebase.projects.get"]
+[debug] [2025-06-25T15:49:13.121Z] Checked if tokens are valid: true, expires at: 1750868080491
+[debug] [2025-06-25T15:49:13.121Z] Checked if tokens are valid: true, expires at: 1750868080491
+[debug] [2025-06-25T15:49:13.122Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/dotbot-34790:testIamPermissions [none]
+[debug] [2025-06-25T15:49:13.122Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/dotbot-34790:testIamPermissions x-goog-quota-user=projects/dotbot-34790
+[debug] [2025-06-25T15:49:13.122Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/dotbot-34790:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2025-06-25T15:49:14.426Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/dotbot-34790:testIamPermissions 200
+[debug] [2025-06-25T15:49:14.426Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/dotbot-34790:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2025-06-25T15:49:14.429Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-06-25T15:49:14.450Z] defaultcredentials: writing to file C:\Users\home\AppData\Roaming\firebase\vishnu_23ai_gmail.com_application_default_credentials.json
+[debug] [2025-06-25T15:49:14.451Z] DEBUG: Setting GAC to C:\Users\home\AppData\Roaming\firebase\vishnu_23ai_gmail.com_application_default_credentials.json
+[debug] [2025-06-25T15:49:14.451Z] Checked if tokens are valid: true, expires at: 1750868080491
+[debug] [2025-06-25T15:49:14.451Z] Checked if tokens are valid: true, expires at: 1750868080491
+[debug] [2025-06-25T15:49:14.451Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/dotbot-34790/adminSdkConfig [none]
+[debug] [2025-06-25T15:49:15.037Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/dotbot-34790/adminSdkConfig 200
+[debug] [2025-06-25T15:49:15.037Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/dotbot-34790/adminSdkConfig {"projectId":"dotbot-34790","storageBucket":"dotbot-34790.firebasestorage.app"}
+[debug] [2025-06-25T15:49:15.045Z] [functions] Watching "C:\Users\home\OneDrive\Desktop\DOTBot-Prototype\dotbot-auth\functions" for Cloud Functions...
+[debug] [2025-06-25T15:49:15.047Z] Validating nodejs source
+[debug] [2025-06-25T15:49:15.854Z] > [functions] package.json contents: {
   "name": "functions",
   "description": "Cloud Functions for Firebase",
   "scripts": {
@@ -42,10 +45,12 @@
   },
   "main": "index.js",
   "dependencies": {
+    "axios": "^1.10.0",
     "dotenv": "^16.5.0",
     "firebase-admin": "^12.6.0",
     "firebase-functions": "^6.0.1",
-    "mongoose": "^8.16.0"
+    "mongoose": "^8.16.0",
+    "openai": "^4.104.0"
   },
   "devDependencies": {
     "eslint": "^8.15.0",
@@ -54,288 +59,15 @@
   },
   "private": true
 }
-[debug] [2025-06-20T10:30:58.653Z] Building nodejs source
-[debug] [2025-06-20T10:30:58.654Z] Failed to find version of module node: reached end of search path C:\Users\home\OneDrive\Desktop\DOTBot-Prototype\dotbot-auth\functions\node_modules
+[debug] [2025-06-25T15:49:15.855Z] Building nodejs source
+[debug] [2025-06-25T15:49:15.855Z] Failed to find version of module node: reached end of search path C:\Users\home\OneDrive\Desktop\DOTBot-Prototype\dotbot-auth\functions\node_modules
 [info] +  functions: Using node@22 from host. 
 [info] i  functions: Loaded environment variables from .env. 
-[debug] [2025-06-20T10:30:58.656Z] Could not find functions.yaml. Must use http discovery
-[debug] [2025-06-20T10:30:58.664Z] Found firebase-functions binary at 'C:\Users\home\OneDrive\Desktop\DOTBot-Prototype\dotbot-auth\functions\node_modules\.bin\firebase-functions'
-[info] Serving at port 8424
+[debug] [2025-06-25T15:49:15.858Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-06-25T15:49:15.865Z] Found firebase-functions binary at 'C:\Users\home\OneDrive\Desktop\DOTBot-Prototype\dotbot-auth\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8207
 
-[error] (node:17576) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
-(Use `node --trace-warnings ...` to show where the warning was created)
+[debug] [2025-06-25T15:49:16.901Z] Got response from /__/functions.yaml {"endpoints":{"api":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[info] ✅ MongoDB connected
 
-[error] (node:17576) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
-
-[debug] [2025-06-20T10:30:59.968Z] Got response from /__/functions.yaml {"endpoints":{"api":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
-[debug] [2025-06-20T10:31:10.021Z] [functions] Loaded functions definitions from source: api.
-[debug] [2025-06-20T10:31:10.021Z] [functions[us-central1-api]] http function initialized (http://127.0.0.1:5000/dotbot-34790/us-central1/api).
-[info] i  functions: Loaded functions: api 
-[warn] !  functions: The following emulators are not running, calls to these services will affect production: firestore, database, pubsub, storage, eventarc, tasks 
-[debug] [2025-06-20T11:10:51.916Z] DEBUG: File C:\Users\home\OneDrive\Desktop\DOTBot-Prototype\dotbot-auth\functions\index.js changed, reloading triggers
-[debug] [2025-06-20T11:10:52.929Z] Validating nodejs source
-[debug] [2025-06-20T11:10:53.807Z] > [functions] package.json contents: {
-  "name": "functions",
-  "description": "Cloud Functions for Firebase",
-  "scripts": {
-    "lint": "echo 'Linting skipped'",
-    "serve": "firebase emulators:start --only functions",
-    "shell": "firebase functions:shell",
-    "start": "npm run shell",
-    "deploy": "firebase deploy --only functions",
-    "logs": "firebase functions:log"
-  },
-  "engines": {
-    "node": "22"
-  },
-  "main": "index.js",
-  "dependencies": {
-    "dotenv": "^16.5.0",
-    "firebase-admin": "^12.6.0",
-    "firebase-functions": "^6.0.1",
-    "mongoose": "^8.16.0"
-  },
-  "devDependencies": {
-    "eslint": "^8.15.0",
-    "eslint-config-google": "^0.14.0",
-    "firebase-functions-test": "^3.1.0"
-  },
-  "private": true
-}
-[debug] [2025-06-20T11:10:53.807Z] Building nodejs source
-[debug] [2025-06-20T11:10:53.807Z] Failed to find version of module node: reached end of search path C:\Users\home\OneDrive\Desktop\DOTBot-Prototype\dotbot-auth\functions\node_modules
-[info] +  functions: Using node@22 from host. 
-[info] i  functions: Loaded environment variables from .env. 
-[debug] [2025-06-20T11:10:53.809Z] Could not find functions.yaml. Must use http discovery
-[debug] [2025-06-20T11:10:53.816Z] Found firebase-functions binary at 'C:\Users\home\OneDrive\Desktop\DOTBot-Prototype\dotbot-auth\functions\node_modules\.bin\firebase-functions'
-[debug] [2025-06-20T11:10:53.827Z] DEBUG: File C:\Users\home\OneDrive\Desktop\DOTBot-Prototype\dotbot-auth\functions\index.js changed, reloading triggers
-[info] Serving at port 8757
-
-[error] ReferenceError: app is not defined
-    at Object.<anonymous> (C:\Users\home\OneDrive\Desktop\DOTBot-Prototype\dotbot-auth\functions\index.js:1:1)
-    at Module._compile (node:internal/modules/cjs/loader:1730:14)
-    at Object..js (node:internal/modules/cjs/loader:1895:10)
-    at Module.load (node:internal/modules/cjs/loader:1465:32)
-    at Function._load (node:internal/modules/cjs/loader:1282:12)
-    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
-    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
-    at Module.require (node:internal/modules/cjs/loader:1487:12)
-    at require (node:internal/modules/helpers:135:16)
-    at loadModule (C:\Users\home\OneDrive\Desktop\DOTBot-Prototype\dotbot-auth\functions\node_modules\firebase-functions\lib\runtime\loader.js:40:16)
-
-[debug] [2025-06-20T11:10:54.077Z] Got response code 400; body Failed to generate manifest from function source: ReferenceError: app is not defined
-[debug] [2025-06-20T11:10:54.842Z] Validating nodejs source
-[debug] [2025-06-20T11:10:55.689Z] > [functions] package.json contents: {
-  "name": "functions",
-  "description": "Cloud Functions for Firebase",
-  "scripts": {
-    "lint": "echo 'Linting skipped'",
-    "serve": "firebase emulators:start --only functions",
-    "shell": "firebase functions:shell",
-    "start": "npm run shell",
-    "deploy": "firebase deploy --only functions",
-    "logs": "firebase functions:log"
-  },
-  "engines": {
-    "node": "22"
-  },
-  "main": "index.js",
-  "dependencies": {
-    "dotenv": "^16.5.0",
-    "firebase-admin": "^12.6.0",
-    "firebase-functions": "^6.0.1",
-    "mongoose": "^8.16.0"
-  },
-  "devDependencies": {
-    "eslint": "^8.15.0",
-    "eslint-config-google": "^0.14.0",
-    "firebase-functions-test": "^3.1.0"
-  },
-  "private": true
-}
-[debug] [2025-06-20T11:10:55.689Z] Building nodejs source
-[debug] [2025-06-20T11:10:55.689Z] Failed to find version of module node: reached end of search path C:\Users\home\OneDrive\Desktop\DOTBot-Prototype\dotbot-auth\functions\node_modules
-[info] +  functions: Using node@22 from host. 
-[info] i  functions: Loaded environment variables from .env. 
-[debug] [2025-06-20T11:10:55.690Z] Could not find functions.yaml. Must use http discovery
-[debug] [2025-06-20T11:10:55.696Z] Found firebase-functions binary at 'C:\Users\home\OneDrive\Desktop\DOTBot-Prototype\dotbot-auth\functions\node_modules\.bin\firebase-functions'
-[info] Serving at port 8258
-
-[error] ReferenceError: app is not defined
-    at Object.<anonymous> (C:\Users\home\OneDrive\Desktop\DOTBot-Prototype\dotbot-auth\functions\index.js:1:1)
-    at Module._compile (node:internal/modules/cjs/loader:1730:14)
-    at Object..js (node:internal/modules/cjs/loader:1895:10)
-    at Module.load (node:internal/modules/cjs/loader:1465:32)
-    at Function._load (node:internal/modules/cjs/loader:1282:12)
-    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
-    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
-    at Module.require (node:internal/modules/cjs/loader:1487:12)
-    at require (node:internal/modules/helpers:135:16)
-    at loadModule (C:\Users\home\OneDrive\Desktop\DOTBot-Prototype\dotbot-auth\functions\node_modules\firebase-functions\lib\runtime\loader.js:40:16)
-
-[debug] [2025-06-20T11:10:55.971Z] Got response code 400; body Failed to generate manifest from function source: ReferenceError: app is not defined
-[error] !!  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
-[error] !!  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
-[debug] [2025-06-20T11:13:15.215Z] DEBUG: File C:\Users\home\OneDrive\Desktop\DOTBot-Prototype\dotbot-auth\functions\db.js changed, reloading triggers
-[debug] [2025-06-20T11:13:16.221Z] Validating nodejs source
-[debug] [2025-06-20T11:13:17.056Z] > [functions] package.json contents: {
-  "name": "functions",
-  "description": "Cloud Functions for Firebase",
-  "scripts": {
-    "lint": "echo 'Linting skipped'",
-    "serve": "firebase emulators:start --only functions",
-    "shell": "firebase functions:shell",
-    "start": "npm run shell",
-    "deploy": "firebase deploy --only functions",
-    "logs": "firebase functions:log"
-  },
-  "engines": {
-    "node": "22"
-  },
-  "main": "index.js",
-  "dependencies": {
-    "dotenv": "^16.5.0",
-    "firebase-admin": "^12.6.0",
-    "firebase-functions": "^6.0.1",
-    "mongoose": "^8.16.0"
-  },
-  "devDependencies": {
-    "eslint": "^8.15.0",
-    "eslint-config-google": "^0.14.0",
-    "firebase-functions-test": "^3.1.0"
-  },
-  "private": true
-}
-[debug] [2025-06-20T11:13:17.056Z] Building nodejs source
-[debug] [2025-06-20T11:13:17.056Z] Failed to find version of module node: reached end of search path C:\Users\home\OneDrive\Desktop\DOTBot-Prototype\dotbot-auth\functions\node_modules
-[info] +  functions: Using node@22 from host. 
-[info] i  functions: Loaded environment variables from .env. 
-[debug] [2025-06-20T11:13:17.057Z] Could not find functions.yaml. Must use http discovery
-[debug] [2025-06-20T11:13:17.063Z] Found firebase-functions binary at 'C:\Users\home\OneDrive\Desktop\DOTBot-Prototype\dotbot-auth\functions\node_modules\.bin\firebase-functions'
-[debug] [2025-06-20T11:13:17.068Z] DEBUG: File C:\Users\home\OneDrive\Desktop\DOTBot-Prototype\dotbot-auth\functions\db.js changed, reloading triggers
-[info] Serving at port 8664
-
-[error] ReferenceError: app is not defined
-    at Object.<anonymous> (C:\Users\home\OneDrive\Desktop\DOTBot-Prototype\dotbot-auth\functions\index.js:1:1)
-    at Module._compile (node:internal/modules/cjs/loader:1730:14)
-    at Object..js (node:internal/modules/cjs/loader:1895:10)
-    at Module.load (node:internal/modules/cjs/loader:1465:32)
-    at Function._load (node:internal/modules/cjs/loader:1282:12)
-    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
-    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
-    at Module.require (node:internal/modules/cjs/loader:1487:12)
-    at require (node:internal/modules/helpers:135:16)
-    at loadModule (C:\Users\home\OneDrive\Desktop\DOTBot-Prototype\dotbot-auth\functions\node_modules\firebase-functions\lib\runtime\loader.js:40:16)
-
-[debug] [2025-06-20T11:13:17.316Z] Got response code 400; body Failed to generate manifest from function source: ReferenceError: app is not defined
-[debug] [2025-06-20T11:13:18.079Z] Validating nodejs source
-[debug] [2025-06-20T11:13:18.953Z] > [functions] package.json contents: {
-  "name": "functions",
-  "description": "Cloud Functions for Firebase",
-  "scripts": {
-    "lint": "echo 'Linting skipped'",
-    "serve": "firebase emulators:start --only functions",
-    "shell": "firebase functions:shell",
-    "start": "npm run shell",
-    "deploy": "firebase deploy --only functions",
-    "logs": "firebase functions:log"
-  },
-  "engines": {
-    "node": "22"
-  },
-  "main": "index.js",
-  "dependencies": {
-    "dotenv": "^16.5.0",
-    "firebase-admin": "^12.6.0",
-    "firebase-functions": "^6.0.1",
-    "mongoose": "^8.16.0"
-  },
-  "devDependencies": {
-    "eslint": "^8.15.0",
-    "eslint-config-google": "^0.14.0",
-    "firebase-functions-test": "^3.1.0"
-  },
-  "private": true
-}
-[debug] [2025-06-20T11:13:18.953Z] Building nodejs source
-[debug] [2025-06-20T11:13:18.953Z] Failed to find version of module node: reached end of search path C:\Users\home\OneDrive\Desktop\DOTBot-Prototype\dotbot-auth\functions\node_modules
-[info] +  functions: Using node@22 from host. 
-[info] i  functions: Loaded environment variables from .env. 
-[debug] [2025-06-20T11:13:18.954Z] Could not find functions.yaml. Must use http discovery
-[debug] [2025-06-20T11:13:18.960Z] Found firebase-functions binary at 'C:\Users\home\OneDrive\Desktop\DOTBot-Prototype\dotbot-auth\functions\node_modules\.bin\firebase-functions'
-[info] Serving at port 8141
-
-[error] ReferenceError: app is not defined
-    at Object.<anonymous> (C:\Users\home\OneDrive\Desktop\DOTBot-Prototype\dotbot-auth\functions\index.js:1:1)
-    at Module._compile (node:internal/modules/cjs/loader:1730:14)
-    at Object..js (node:internal/modules/cjs/loader:1895:10)
-    at Module.load (node:internal/modules/cjs/loader:1465:32)
-    at Function._load (node:internal/modules/cjs/loader:1282:12)
-    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
-    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
-    at Module.require (node:internal/modules/cjs/loader:1487:12)
-    at require (node:internal/modules/helpers:135:16)
-    at loadModule (C:\Users\home\OneDrive\Desktop\DOTBot-Prototype\dotbot-auth\functions\node_modules\firebase-functions\lib\runtime\loader.js:40:16)
-
-[debug] [2025-06-20T11:13:19.246Z] Got response code 400; body Failed to generate manifest from function source: ReferenceError: app is not defined
-[error] !!  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
-[error] !!  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
-[debug] [2025-06-20T12:35:50.192Z] DEBUG: File C:\Users\home\OneDrive\Desktop\DOTBot-Prototype\dotbot-auth\functions\index.js changed, reloading triggers
-[debug] [2025-06-20T12:35:51.200Z] Validating nodejs source
-[debug] [2025-06-20T12:35:52.129Z] > [functions] package.json contents: {
-  "name": "functions",
-  "description": "Cloud Functions for Firebase",
-  "scripts": {
-    "lint": "echo 'Linting skipped'",
-    "serve": "firebase emulators:start --only functions",
-    "shell": "firebase functions:shell",
-    "start": "npm run shell",
-    "deploy": "firebase deploy --only functions",
-    "logs": "firebase functions:log"
-  },
-  "engines": {
-    "node": "22"
-  },
-  "main": "index.js",
-  "dependencies": {
-    "dotenv": "^16.5.0",
-    "firebase-admin": "^12.6.0",
-    "firebase-functions": "^6.0.1",
-    "mongoose": "^8.16.0"
-  },
-  "devDependencies": {
-    "eslint": "^8.15.0",
-    "eslint-config-google": "^0.14.0",
-    "firebase-functions-test": "^3.1.0"
-  },
-  "private": true
-}
-[debug] [2025-06-20T12:35:52.129Z] Building nodejs source
-[debug] [2025-06-20T12:35:52.130Z] Failed to find version of module node: reached end of search path C:\Users\home\OneDrive\Desktop\DOTBot-Prototype\dotbot-auth\functions\node_modules
-[info] +  functions: Using node@22 from host. 
-[info] i  functions: Loaded environment variables from .env. 
-[debug] [2025-06-20T12:35:52.131Z] Could not find functions.yaml. Must use http discovery
-[debug] [2025-06-20T12:35:52.140Z] Found firebase-functions binary at 'C:\Users\home\OneDrive\Desktop\DOTBot-Prototype\dotbot-auth\functions\node_modules\.bin\firebase-functions'
-[info] Serving at port 8775
-
-[debug] [2025-06-20T12:35:53.592Z] Got response from /__/functions.yaml {"endpoints":{"api":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
-[error] C:\Users\home\OneDrive\Desktop\DOTBot-Prototype\dotbot-auth\functions\node_modules\mongoose\lib\drivers\node-mongodb-native\connection.js:237
-    throw new MongooseError('The `uri` parameter to `openUri()` must be a ' +
-          ^
-
-MongooseError: The `uri` parameter to `openUri()` must be a string, got "undefined". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.
-    at NativeConnection.createClient (C:\Users\home\OneDrive\Desktop\DOTBot-Prototype\dotbot-auth\functions\node_modules\mongoose\lib\drivers\node-mongodb-native\connection.js:237:11)
-    at NativeConnection.openUri (C:\Users\home\OneDrive\Desktop\DOTBot-Prototype\dotbot-auth\functions\node_modules\mongoose\lib\connection.js:1071:34)
-    at Mongoose.connect (C:\Users\home\OneDrive\Desktop\DOTBot-Prototype\dotbot-auth\functions\node_modules\mongoose\lib\mongoose.js:450:15)
-    at Object.<anonymous> (C:\Users\home\OneDrive\Desktop\DOTBot-Prototype\dotbot-auth\functions\db.js:3:10)
-    at Module._compile (node:internal/modules/cjs/loader:1730:14)
-    at Object..js (node:internal/modules/cjs/loader:1895:10)
-    at Module.load (node:internal/modules/cjs/loader:1465:32)
-    at Function._load (node:internal/modules/cjs/loader:1282:12)
-    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
-    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
-
-Node.js v22.16.0
-
-[debug] [2025-06-20T12:35:53.598Z] Failed to call quitquitquit. This often means the server failed to start request to http://localhost:8775/__/quitquitquit failed, reason:  {"message":"request to http://localhost:8775/__/quitquitquit failed, reason: ","type":"system","errno":"ECONNREFUSED","code":"ECONNREFUSED"}
-[debug] [2025-06-20T12:35:53.606Z] [functions] Loaded functions definitions from source: api.
+[error] ^C

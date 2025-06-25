@@ -5,6 +5,7 @@ const cors = require("cors");
 require("dotenv").config();
 const mongoose = require("mongoose");
 const { Chat, User } = require("./db");
+require("dotenv").config({ path: "./.env" }); // relative to functions folder
 
 admin.initializeApp();
 
@@ -149,18 +150,36 @@ const axios = require("axios"); // Make sure this is at the top if not already
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 
 // ✅ Chat with GPT and Save to DB
+// ✅ Chat with GPT and Save to DB using OpenAI API
 app.post("/chat", authenticate, async (req, res) => {
   const { prompt } = req.body;
   const uid = req.user.uid;
 
-  console.log("🔥 Chat Request (Mock):", { uid, prompt });
+  console.log("🔥 Chat Request:", { uid, prompt });
 
   if (!prompt) {
     return res.status(400).json({ status: "error", message: "Missing prompt" });
   }
 
   try {
-    const gptResponse = `Hi! I'm DOTBot. You asked: "${prompt}" — that's a great question! I'll have a proper response soon.`;
+    const gptRes = await axios.post(
+      "https://api.openai.com/v1/chat/completions",
+      {
+        model: "gpt-3.5-turbo",
+        messages: [
+          { role: "system", content: "You are DOTBot, the assistant for GDOT contractors." },
+          { role: "user", content: prompt },
+        ],
+      },
+      {
+        headers: {
+          Authorization: `Bearer ${OPENAI_API_KEY}`,
+          "Content-Type": "application/json",
+        },
+      }
+    );
+
+    const gptResponse = gptRes.data.choices[0].message.content.trim();
 
     // Save to MongoDB
     const newChat = new Chat({
@@ -171,14 +190,15 @@ app.post("/chat", authenticate, async (req, res) => {
     });
     await newChat.save();
 
-    console.log("✅ Placeholder Response:", gptResponse);
+    console.log("✅ GPT Response:", gptResponse);
 
     res.json({ status: "success", prompt, response: gptResponse });
   } catch (error) {
-    console.error("❌ Chat Error:", error.message);
-    res.status(500).json({ status: "error", message: "Failed to save chat" });
+    console.error("❌ GPT Error:", error.response?.data || error.message);
+    res.status(500).json({ status: "error", message: "Failed to process GPT chat" });
   }
 });
+
 
 // ✅ GET /get-chat-history
 app.get("/get-chat-history", authenticate, async (req, res) => {
@@ -198,9 +218,8 @@ app.get("/get-chat-history", authenticate, async (req, res) => {
   }
 });
 
-
-
-
+// ✅ Query Specs using RAG Pipeline
+// POST /query-specs
 
 
 exports.api = functions.https.onRequest(app);

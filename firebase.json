@@ -3,6 +3,8 @@
     {
       "source": "functions",
       "codebase": "default",
+      "memory": "512MB",
+      "runtime": "nodejs22",
       "ignore": [
         "node_modules",
         ".git",
