@@ -151,51 +151,170 @@ const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 
 // ✅ Chat with GPT and Save to DB
 // ✅ Chat with GPT and Save to DB using OpenAI API
-app.post("/chat", authenticate, async (req, res) => {
-  const { prompt } = req.body;
+app.post('/chat', authenticate, async (req, res) => {
+  const { prompt, mode = 'general' } = req.body;
   const uid = req.user.uid;
 
-  console.log("🔥 Chat Request:", { uid, prompt });
+  console.log('🔥 Chat Request:', { uid, prompt, mode });
 
   if (!prompt) {
-    return res.status(400).json({ status: "error", message: "Missing prompt" });
+    return res.status(400).json({ status: 'error', message: 'Missing prompt' });
   }
 
   try {
+    let module = 'general';
+    let query = prompt.trim();
+
+    console.log('🔍 Analyzing prompt:', prompt);
+
+    // === Module Detection & Query Extraction ===
+
+    // 1. Vendor Directory
+    if (/\b(vendor|contractor|company|number)\b/i.test(prompt) || /\b\d{8,}\b/.test(prompt)) {
+      module = 'vendors';
+      const vendorMatch = prompt.match(/\b\d{8,}\b/);
+      query = vendorMatch ? vendorMatch[0] : prompt.replace(/\b(vendor|contractor|company|number)\b/gi, '').trim();
+    }
+
+    // 2. Construction Standards
+    else if (
+      /\b(standard|chart|design|guideline)\b/i.test(prompt) ||
+      /\b[\w]{1,10}-[\w]{1,10}\b/i.test(prompt)
+    ) {
+      module = 'standards';
+      const stdMatch = prompt.match(/\b[\w]{1,10}-[\w]{1,10}\b/i);  // e.g. 2405-1, D-07, 1011A-PRECAST
+      query = stdMatch ? stdMatch[0] : prompt.replace(/\b(standard|chart|design|guideline)\b/gi, '').trim();
+    }
+
+    // 3. Specifications
+    else if (
+      /\b(spec|details|requirements|specification|section)\b/i.test(prompt) ||
+      /\b\d{1,3}\b/.test(prompt)
+    ) {
+      module = 'specifications';
+      const specMatch = prompt.match(/\b\d{1,3}\b/); // Section number (e.g., 156)
+      query = specMatch ? specMatch[0] : prompt.replace(/\b(spec|details|requirements|specification|section)\b/gi, '').trim();
+    }
+
+    console.log('✅ Inferred module:', module, 'query:', query);
+
+    // === MongoDB Lookup Based on Module ===
+
+    let dbData = null;
+
+    if (module !== 'general') {
+      console.log('🔍 Querying MongoDB:', { module, query });
+
+      switch (module) {
+        case 'vendors':
+          dbData = await mongoose.connection.db.collection('vendor_directory').findOne({
+            $or: [
+              { vendor_number: query },
+              { vendor: { $regex: new RegExp(query, 'i') } },
+              { contractor_name: { $regex: new RegExp(query, 'i') } },
+              { work_classes: { $regex: new RegExp(query, 'i') } }
+            ]
+          });
+          break;
+
+        case 'standards':
+          dbData = await mongoose.connection.db.collection('construction_standards').findOne({
+            $or: [
+              { standard_id: { $regex: new RegExp(`^${query}$`, 'i') } },
+              { description: { $regex: new RegExp(query, 'i') } }
+            ]
+          });
+          break;
+
+        case 'specifications':
+          dbData = await mongoose.connection.db.collection('spec_chunks').findOne({
+            $or: [
+              { section_id: query },
+              { title: { $regex: new RegExp(query, 'i') } },
+              { text: { $regex: new RegExp(query, 'i') } }
+            ]
+          });
+          break;
+      }
+
+      console.log('🔎 DB Data:', dbData ? 'Found' : 'Not found');
+    }
+
+    // === Handle strict GDOT-only mode fallback ===
+    if (mode === 'module' && !dbData) {
+      const fallback = "This query doesn't match any GDOT modules (standards, specifications, or vendors). Please rephrase using GDOT-specific terms.";
+      const newChat = new Chat({
+        userId: uid,
+        prompt,
+        response: fallback,
+        timestamp: new Date(),
+        module,
+        db_data: null,
+      });
+      await newChat.save();
+
+      return res.json({
+        status: 'success',
+        prompt,
+        response: fallback,
+        db_data: null,
+        inferred_module: module,
+        strict_mode: true
+      });
+    }
+
+    // === Prepare GPT prompt ===
+    const systemMessage = {
+      role: 'system',
+      content:
+        `You are DOTBot, the assistant for GDOT contractors. Use the following GDOT data if available: ${dbData ? JSON.stringify(dbData) : 'none'}.\n` +
+        (mode === 'module' ? "If no data is provided, do not guess. Politely say the query is outside GDOT scope." : "")
+    };
+
     const gptRes = await axios.post(
-      "https://api.openai.com/v1/chat/completions",
+      'https://api.openai.com/v1/chat/completions',
       {
-        model: "gpt-3.5-turbo",
+        model: 'gpt-3.5-turbo',
         messages: [
-          { role: "system", content: "You are DOTBot, the assistant for GDOT contractors." },
-          { role: "user", content: prompt },
-        ],
+          systemMessage,
+          { role: 'user', content: prompt }
+        ]
       },
       {
         headers: {
           Authorization: `Bearer ${OPENAI_API_KEY}`,
-          "Content-Type": "application/json",
-        },
+          'Content-Type': 'application/json'
+        }
       }
     );
 
     const gptResponse = gptRes.data.choices[0].message.content.trim();
 
-    // Save to MongoDB
+    // === Save and return response ===
     const newChat = new Chat({
       userId: uid,
       prompt,
       response: gptResponse,
       timestamp: new Date(),
+      module,
+      db_data: dbData || null,
     });
+
     await newChat.save();
 
-    console.log("✅ GPT Response:", gptResponse);
+    console.log('✅ GPT Response:', gptResponse);
 
-    res.json({ status: "success", prompt, response: gptResponse });
+    res.json({
+      status: 'success',
+      prompt,
+      response: gptResponse,
+      db_data: dbData,
+      inferred_module: module,
+      strict_mode: mode === 'module'
+    });
   } catch (error) {
-    console.error("❌ GPT Error:", error.response?.data || error.message);
-    res.status(500).json({ status: "error", message: "Failed to process GPT chat" });
+    console.error('❌ GPT Error:', error.response?.data || error.message);
+    res.status(500).json({ status: 'error', message: 'Failed to process GPT chat' });
   }
 });
 

@@ -1,0 +1,294 @@
+[
+       {
+         "vendor": "J.H. NICKLAS INC",
+         "vendor_number": "00000000018989",
+         "contractor_name": "HEATHER NICKLAS",
+         "status": "Registered",
+         "shipping_address": "37 HEARTWOOD DR CARTERSVILLE, GA 30120",
+         "phone_number": "(770)231-2064",
+         "email": "HNICKLAS3@GMAIL.COM",
+         "prequalification_expiry": "2026-04-30",
+         "work_classes": ["935 - FIBER OPTIC SYSTEM"]
+       },
+       {
+         "vendor": "BROWN PLANNING DESIGN & PROPERTY HOLDINGS LLC",
+         "vendor_number": "00000000016470",
+         "contractor_name": "WILLIE BROWN JR",
+         "status": "Registered",
+         "shipping_address": "945 GENE REED RD. BIRMINGHAM, AL 35235",
+         "phone_number": "(205)567-7010",
+         "email": "wbrow@yahoo.com",
+         "prequalification_expiry": "2021-12-31",
+         "work_classes": ["700 - GRASSING", "702 - VINE, SHRUB, AND TREE PLANTING"]
+       },
+       {
+         "vendor": "KELLY CONSTRUCTION CO., INC.",
+         "vendor_number": "2KE271",
+         "contractor_name": "ROBERT A. KELLY",
+         "status": "Registered",
+         "shipping_address": "5350 OLD FLOYD ROAD MABLETON, GA 30126",
+         "mailing_address": "5350 OLD FLOYD ROAD MABLETON, GA 30126",
+         "phone_number": "(770)948-6934",
+         "fax_number": "(770)948-6788",
+         "email": "ROBERT.KELLY@KCCICONSTRUCTION.COM",
+         "prequalification_expiry": "2027-02-28",
+         "work_classes": [
+           "201 - CLEARING AND GRUBBING RIGHT OF WAY",
+           "205 - ROADWAY EXCAVATION",
+           "205a - HAULING SOIL WITHIN THE PROJECT",
+           "206a - HAULING SOIL TO THE PROJECT",
+           "209 - SUBGRADE CONSTRUCTION",
+           "310 - GRADED AGGREGATE CONSTRUCTION",
+           "310a - HAULING GAB",
+           "400a - HAULING ASPHALTIC CONCRETE MIX",
+           "432a - HAULING MILLINGS",
+           "603a - HAULING RIP RAP TO PROJECT, ALL SIZES",
+           "800a - HAULING AGGREGATE"
+         ]
+       },
+       {
+         "vendor": "KEMET SOLUTIONS LLC",
+         "vendor_number": "00000000017008",
+         "contractor_name": "STARLA MICHAEL",
+         "status": "Registered",
+         "shipping_address": "123 BARRINGTON ROAD POOLER, GA 31322",
+         "phone_number": "(912)707-2338",
+         "email": "KEMETSOLUTIONS111@GMAIL.COM",
+         "prequalification_expiry": "2026-03-31",
+         "work_classes": [
+           "206a - HAULING SOIL TO THE PROJECT",
+           "400a - HAULING ASPHALTIC CONCRETE MIX",
+           "800a - HAULING AGGREGATE"
+         ]
+       },
+       {
+         "vendor": "PB BORING COMPANY",
+         "vendor_number": "2BE240",
+         "contractor_name": "PHILLIP BELL",
+         "status": "Registered",
+         "shipping_address": "2699 COUNTY RD. 76 MUSCADINE, AL 36269",
+         "mailing_address": "2699 COUNTY RD. 76 MUSCADINE, AL 36269",
+         "phone_number": "(770)853-7543",
+         "fax_number": "(256)579-5105",
+         "email": "PBBORRING@GMAIL.COM",
+         "prequalification_expiry": "2023-11-30",
+         "work_classes": ["615 - JACKING OR BORING PIPE"]
+       },
+       {
+         "vendor": "QUANTUM-MAC INTERNATIONAL, INC",
+         "vendor_number": "2QU295",
+         "contractor_name": "IMO OKWU",
+         "status": "Registered",
+         "shipping_address": "P. O. BOX 92600 ATLANTA, GA 30314",
+         "mailing_address": "P. O. BOX 92600 ATLANTA, GA 30314",
+         "phone_number": "(404)990-0030",
+         "fax_number": "(770)819-6934",
+         "email": "IMOOKWU@BELLSOUTH.NET",
+         "prequalification_expiry": "2026-12-31",
+         "work_classes": [
+           "201 - CLEARING AND GRUBBING RIGHT OF WAY",
+           "209 - SUBGRADE CONSTRUCTION",
+           "439 - PCC PAVEMENT",
+           "441 - MISCELLANEOUS CONCRETE",
+           "452 - FULL DEPTH SLAB REPLACEMENT",
+           "500c - METAL DECKING",
+           "501 - STEEL STRUCTURES",
+           "511 - REINFORCEMENT STEEL",
+           "550 - STRM DR PIPE, PIPE-ARCH CLVT, SD DR PIPE",
+           "660 - SANITARY SEWERS",
+           "668 - MISC DRAINAGE STRUCTURES",
+           "670 - WATER DISTRIBUTION",
+           "797 - BUILDINGS"
+         ]
+       },
+       {
+         "vendor": "RUBY-COLLINS, INC.",
+         "vendor_number": "2RU270",
+         "contractor_name": "SCOTT N. CLINE",
+         "status": "Prequalified",
+         "shipping_address": "4875 MARTIN COURT SMYRNA, GA 30082",
+         "mailing_address": "4875 MARTIN COURT SMYRNA, GA 30082",
+         "phone_number": "(770)432-2900",
+         "fax_number": "(770)432-8238",
+         "email": "scline@ruby-collins.com",
+         "prequalification_expiry": "2025-07-31",
+         "work_classes": ["660 - SANITARY SEWERS", "670 - WATER DISTRIBUTION"]
+       },
+       {
+         "vendor": "THE EROSION COMPANY, LLC",
+         "vendor_number": "2ER180",
+         "contractor_name": "WILSON BORDEN",
+         "status": "Prequalified",
+         "shipping_address": "3207 South Cherokee Lane Woodstock, GA 30188",
+         "phone_number": "(678)990-0207",
+         "email": "gwalker@tecompanies.com",
+         "prequalification_expiry": "2025-12-31",
+         "work_classes": ["163 - MISCELLANEOUS EROSION CONTROL ITEMS"]
+       },
+       {
+         "vendor": "TRINITY TRUCKING",
+         "vendor_number": "2AR058",
+         "contractor_name": "GAYLE ARCHER",
+         "status": "Registered",
+         "shipping_address": "115 J.C. LANE TWIN CITY, GA 30471",
+         "phone_number": "(478)455-0094",
+         "email": "BGARCHER22@GMAIL.COM",
+         "prequalification_expiry": "2024-02-28",
+         "work_classes": [
+           "205a - HAULING SOIL WITHIN THE PROJECT",
+           "206a - HAULING SOIL TO THE PROJECT",
+           "310a - HAULING GAB",
+           "400a - HAULING ASPHALTIC CONCRETE MIX",
+           "432a - HAULING MILLINGS",
+           "603a - HAULING RIP RAP TO PROJECT, ALL SIZES",
+           "800a - HAULING AGGREGATE"
+         ]
+       },
+       {
+         "vendor": "1 STOP LIGHTING, INC.",
+         "vendor_number": "00000000013529",
+         "contractor_name": "VERONICA C. GEORGE",
+         "status": "Registered",
+         "email": "VERONICA@1STOPLIGHTINGINC.COM",
+         "prequalification_expiry": "2021-01-31",
+         "work_classes": ["524 - DRILLED CAISSON FOUNDATIONS"]
+       },
+       {
+         "vendor": "10X LOGISTICS LLC",
+         "vendor_number": "00000000018443",
+         "contractor_name": "ALBERT DUCREAY",
+         "status": "Registered",
+         "shipping_address": "3015 RN MARTIN ST EAST POINT, GA 30344",
+         "phone_number": "(770)866-6196",
+         "email": "10XLOGISTICS.GA@GMAIL.COM",
+         "prequalification_expiry": "2025-06-30",
+         "work_classes": ["206a - HAULING SOIL TO THE PROJECT", "432a - HAULING MILLINGS"]
+       },
+       {
+         "vendor": "1201 CONSTRUCTION LLC",
+         "vendor_number": "00000000018801",
+         "contractor_name": "BRITTNEY BRIDGES",
+         "status": "Registered",
+         "shipping_address": "408 HOBO LANE WOODSTOCK, GA 30189",
+         "phone_number": "(985)231-9103",
+         "email": "1201CONSTRUCTION@GMAIL.COM",
+         "prequalification_expiry": "2026-03-31",
+         "work_classes": [
+           "205a - HAULING SOIL WITHIN THE PROJECT",
+           "206a - HAULING SOIL TO THE PROJECT",
+           "310a - HAULING GAB",
+           "400a - HAULING ASPHALTIC CONCRETE MIX",
+           "432a - HAULING MILLINGS",
+           "603a - HAULING RIP RAP TO PROJECT, ALL SIZES",
+           "800a - HAULING AGGREGATE"
+         ]
+       },
+       {
+         "vendor": "190 CONSTRUCTION LLC",
+         "vendor_number": "00000000018028",
+         "contractor_name": "MIGUEL GIL MORALES",
+         "status": "Registered",
+         "shipping_address": "2470 DAYBREAK DR ROCKWALL, TX 75032",
+         "phone_number": "(972)302-1910",
+         "email": "190CONSTRUCTION@GMAIL.COM",
+         "prequalification_expiry": "2024-08-31",
+         "work_classes": ["441 - MISCELLANEOUS CONCRETE"]
+       },
+       {
+         "vendor": "191 CONSTRUCTION LLC",
+         "vendor_number": "00000000018800",
+         "contractor_name": "MAYKELL JESUS PARRA DUQUE",
+         "status": "Registered",
+         "shipping_address": "26454 MORGAN CREEK LN KATY, TX 77494",
+         "phone_number": "(770)600-5426",
+         "email": "191CONSTRUCTION@GMAIL.COM",
+         "prequalification_expiry": "2026-04-30",
+         "work_classes": ["441 - MISCELLANEOUS CONCRETE"]
+       },
+       {
+         "vendor": "2 RIVERS TRUCKING, LLC",
+         "vendor_number": "00000000015235",
+         "contractor_name": "JASON RIVERS",
+         "status": "Registered",
+         "email": "jason.rivers@2riverstrucking.com",
+         "prequalification_expiry": "2020-04-30",
+         "work_classes": [
+           "205a - HAULING SOIL WITHIN THE PROJECT",
+           "206a - HAULING SOIL TO THE PROJECT",
+           "310a - HAULING GAB",
+           "400a - HAULING ASPHALTIC CONCRETE MIX",
+           "432a - HAULING MILLINGS",
+           "603a - HAULING RIP RAP TO PROJECT, ALL SIZES",
+           "800a - HAULING AGGREGATE"
+         ]
+       },
+       {
+         "vendor": "211 CONTRACTORS COMPANY, LLC",
+         "vendor_number": "00000000015504",
+         "contractor_name": "FRANCIS ACOSTA",
+         "status": "Registered",
+         "email": "CONSTRUCTION211@YAHOO.COM",
+         "prequalification_expiry": "2020-03-31",
+         "work_classes": ["441 - MISCELLANEOUS CONCRETE"]
+       },
+       {
+         "vendor": "3 KINGS CONSTRUCTION RESIDENTIAL, LLC.",
+         "vendor_number": "00000000014602",
+         "contractor_name": "TONY HARRIS",
+         "status": "Registered",
+         "shipping_address": "13800 COPPERMINE ROAD, #185 HERNDON, VA 20171",
+         "phone_number": "(703)214-5194",
+         "email": "kay@3kingsdev.com",
+         "prequalification_expiry": "2023-11-30",
+         "work_classes": [
+           "201 - CLEARING AND GRUBBING RIGHT OF WAY",
+           "205 - ROADWAY EXCAVATION",
+           "208 - EMBANKMENTS",
+           "209 - SUBGRADE CONSTRUCTION",
+           "668 - MISC DRAINAGE STRUCTURES"
+         ]
+       },
+       {
+         "vendor": "3-D MANAGMENT AND SECURITY, LLC",
+         "vendor_number": "00000000018572",
+         "contractor_name": "TORRANCE ASHMON",
+         "status": "Registered",
+         "shipping_address": "1040 BONNEVENTURE WAY LAWRENCEVILLE, GA 30044",
+         "phone_number": "(770)634-4121",
+         "email": "3DMAS@COMCAST.NET",
+         "prequalification_expiry": "2026-12-31",
+         "work_classes": [
+           "205a - HAULING SOIL WITHIN THE PROJECT",
+           "206a - HAULING SOIL TO THE PROJECT",
+           "310a - HAULING GAB",
+           "400a - HAULING ASPHALTIC CONCRETE MIX",
+           "432a - HAULING MILLINGS",
+           "603a - HAULING RIP RAP TO PROJECT, ALL SIZES",
+           "800a - HAULING AGGREGATE"
+         ]
+       },
+       {
+         "vendor": "360 SPECIALTIES, LLC",
+         "vendor_number": "00000000012942",
+         "contractor_name": "Andrea Barnett",
+         "status": "Registered",
+         "shipping_address": "3450 BUFFINGTON CENTER ATLANTA, GA 30349",
+         "phone_number": "(470)223-4123",
+         "email": "angie@360specialties.com",
+         "prequalification_expiry": "2025-07-31",
+         "work_classes": ["441 - MISCELLANEOUS CONCRETE", "797 - BUILDINGS"]
+       },
+       {
+         "vendor": "360 TXC, LLC",
+         "vendor_number": "00000000012979",
+         "contractor_name": "DANA LESTER",
+         "status": "Registered",
+         "shipping_address": "901 S. MOPAC #300 AUSTIN, TX 78701",
+         "mailing_address": "901 S. MOPAC #300 AUSTIN, TX 78701",
+         "phone_number": "(512)574-0623",
+         "fax_number": "(577)710-7474",
+         "email": "360txc@gmail.com",
+         "prequalification_expiry": "2017-06-30",
+         "work_classes": ["797 - BUILDINGS"]
+       }
+     ]
