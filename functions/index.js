@@ -147,7 +147,7 @@ app.post("/auth/social-login", async (req, res) => {
 });
 
 const axios = require("axios"); // Make sure this is at the top if not already
-const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
+const RESOURCE_CHATGPT = process.env.RESOURCE_CHATGPT;
 
 // ✅ Chat with GPT and Save to DB
 // ✅ Chat with GPT and Save to DB using OpenAI API
@@ -282,7 +282,7 @@ app.post('/chat', authenticate, async (req, res) => {
       },
       {
         headers: {
-          Authorization: `Bearer ${OPENAI_API_KEY}`,
+          Authorization: `Bearer ${RESOURCE_CHATGPT}`,
           'Content-Type': 'application/json'
         }
       }
